@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --swiggy-orange: #FC8019;
+  --zomato-red: #E23744;
+  --theme-purple-dark: #2B1E4A;
+  --theme-purple-light: #6B21A8;
+  --theme-purple-accent: #A855F7;
+  --swiggy-dark: #1E1535;
+  --swiggy-muted: #686B78;
+  --swiggy-rating-green: #48C479;
+  --swiggy-bg: #F4F3F8;
+  --swiggy-card-bg: #FFFFFF;
+  --swiggy-veg: #0F8A65;
+  --swiggy-nonveg: #E43B4F;
+  --swiggy-gold: #FFB800;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--swiggy-bg);
+  color: var(--swiggy-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--swiggy-dark);
+  letter-spacing: -0.02em;
+}
+
+/* Swiggy + Zomato Fusion Card Styling */
+.swiggy-card {
+  background: var(--swiggy-card-bg);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 6px 20px rgba(43, 30, 74, 0.07);
+  border: 1px solid rgba(107, 33, 168, 0.08);
+}
+
+.swiggy-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(43, 30, 74, 0.16);
+  border-color: rgba(252, 128, 25, 0.4);
+}
+
+/* Rating Badge */
+.swiggy-rating-badge {
+  background-color: var(--swiggy-rating-green);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 4px 9px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Veg / Non-Veg Icons */
+.veg-icon {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--swiggy-veg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.veg-icon::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--swiggy-veg);
+  border-radius: 50%;
+}
+
+.non-veg-icon {
+  width: 17px;
+  height: 17px;
+  border: 2px solid var(--swiggy-nonveg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.non-veg-icon::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 7px solid var(--swiggy-nonveg);
+}
+
+/* Category Filter Pills */
+.category-pill {
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  background-color: #FFFFFF;
+  color: var(--theme-purple-dark);
+  border: 1px solid rgba(107, 33, 168, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(43, 30, 74, 0.04);
+}
+
+.category-pill:hover {
+  background: #F3E8FF;
+  color: var(--theme-purple-light);
+  border-color: var(--theme-purple-light);
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, #6B21A8 0%, #A855F7 100%);
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 6px 18px rgba(107, 33, 168, 0.35);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A855F7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B21A8;
+}

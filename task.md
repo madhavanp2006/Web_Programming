@@ -1,0 +1,45 @@
+# Tasks - FoodHub Implementation
+
+- [ ] Initialize Backend Project
+  - [ ] Create folder structure
+  - [ ] Write POM file (`pom.xml`) with Maven dependencies
+  - [ ] Add Maven wrapper files (`mvnw`, `mvnw.cmd`, `.mvn/wrapper/`)
+  - [ ] Write `application.properties` (with MySQL configuration and H2 fallback)
+- [ ] Backend Security & Configuration
+  - [ ] Create custom exception handling and global handler
+  - [ ] Create JWT utility helper
+  - [ ] Create Spring Security configuration & JWT request filter
+- [ ] Backend Entities & Repositories
+  - [ ] Create Entity classes and enums with JPA annotations
+  - [ ] Create JPA repository interfaces
+- [ ] Backend Services & Controllers
+  - [ ] Implement authentication & user controller (Register, Login, OTP mock, Wishlist, Profile)
+  - [ ] Implement category controller (Manage categories)
+  - [ ] Implement restaurant controller (Dashboard, CRUD, Approval, Revenue, Blocks)
+  - [ ] Implement food item controller (CRUD, Menu list, Recommendations)
+  - [ ] Implement cart controller (Cart manipulation)
+  - [ ] Implement order & payment controller (Checkout, Status update, Dashboard statistics, PDF Invoice)
+- [ ] Build & Verify Backend
+  - [ ] Run `.\mvnw clean compile` to check for compilation issues
+- [ ] Initialize React Frontend Project
+  - [ ] Run Vite script to create frontend folder
+  - [ ] Install frontend dependencies (antd, axios, react-router-dom, recharts, @ant-design/icons)
+- [ ] Frontend Configuration
+  - [ ] Configure Ant Design theme with primary color `#FF6B00`
+  - [ ] Create Axios API helper with JWT interceptors
+  - [ ] Setup React Router with protected role-based routing
+- [ ] Frontend Core Components
+  - [ ] Navbar & Footer
+  - [ ] Sidebar for Dashboards
+  - [ ] Food Item & Restaurant Cards
+- [ ] Frontend Pages
+  - [ ] Landing page
+  - [ ] Login & Register page
+  - [ ] Home / Restaurant listing (search, filter)
+  - [ ] Restaurant details / Menu selector
+  - [ ] Cart & Checkout (payment selection, coupon code mock)
+  - [ ] Wishlist & User Profile
+  - [ ] Restaurant Dashboard (Menu management, Order management, Revenue metrics and charts)
+  - [ ] Admin Dashboard (User & Restaurant controls, Category management, Revenue and Order charts)
+- [ ] Verify Frontend Build
+  - [ ] Run Vite build to ensure the frontend compiles without errors
